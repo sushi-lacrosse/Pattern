@@ -1,0 +1,19 @@
+隠しフォルダの.gitを削除し、git管理情報初期化
+
+フォルダをgit管理開始
+git init
+
+100MBファイルをgit lfs登録
+git lfs track ak.mov
+
+対象ファイルを全てコミット
+
+gitリモートを追加
+git remote add origin https://github.com/sushi-lacrosse/Pattern.git
+
+.DS_Store
+Mac特有の不要なファイル
+
+今回のエラーの原因
+git lfs でトラッキングしたak.movと.gitattributesファイルを同時にコミットしなければいけない所を、
+ak.movと.gitattributesを順番に一つずつコミットしてしまっていたのが原因。
